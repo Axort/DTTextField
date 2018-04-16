@@ -414,7 +414,8 @@ public class DTTextField: UITextField {
     }
     
     override public func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        let rect = super.rightViewRect(forBounds: bounds)
+        var rect = super.rightViewRect(forBounds: bounds)
+        rect.origin.x -= 10
         return insetForSideView(forBounds: rect)
     }
     
