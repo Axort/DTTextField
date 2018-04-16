@@ -73,7 +73,10 @@ public class DTTextField: UITextField {
     }
     
     public var floatPlaceholderFont = UIFont.systemFont(ofSize: 10.0){
-        didSet{ invalidateIntrinsicContentSize() }
+        didSet{
+            lblFloatPlaceholder.font = floatPlaceholderFont
+            invalidateIntrinsicContentSize()
+        }
     }
     
     public var paddingYFloatLabel:CGFloat = 3.0{
